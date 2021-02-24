@@ -223,35 +223,35 @@ class Request
      * @return array|mixed|null
      * @throws \RuntimeException If environment input is not available
      */
-    public function post($key = null)
-    {
-        if (!isset($this->env['slim.input'])) {
-            throw new \RuntimeException('Missing slim.input in environment variables');
-        }
-        if (!isset($this->env['slim.request.form_hash'])) {
-            $this->env['slim.request.form_hash'] = array();
-            if ($this->isFormData() && is_string($this->env['slim.input'])) {
-                $output = array();
-                if (function_exists('mb_parse_str') && !isset($this->env['slim.tests.ignore_multibyte'])) {
-                    mb_parse_str($this->env['slim.input'], $output);
-                } else {
-                    parse_str($this->env['slim.input'], $output);
-                }
-                $this->env['slim.request.form_hash'] = Util::stripSlashesIfMagicQuotes($output);
-            } else {
-                $this->env['slim.request.form_hash'] = Util::stripSlashesIfMagicQuotes($_POST);
-            }
-        }
-        if ($key) {
-            if (isset($this->env['slim.request.form_hash'][$key])) {
-                return $this->env['slim.request.form_hash'][$key];
-            } else {
-                return null;
-            }
-        } else {
-            return $this->env['slim.request.form_hash'];
-        }
-    }
+    // public function post($key = null)
+    // {
+    //     if (!isset($this->env['slim.input'])) {
+    //         throw new \RuntimeException('Missing slim.input in environment variables');
+    //     }
+    //     if (!isset($this->env['slim.request.form_hash'])) {
+    //         $this->env['slim.request.form_hash'] = array();
+    //         if ($this->isFormData() && is_string($this->env['slim.input'])) {
+    //             $output = array();
+    //             if (function_exists('mb_parse_str') && !isset($this->env['slim.tests.ignore_multibyte'])) {
+    //                 mb_parse_str($this->env['slim.input'], $output);
+    //             } else {
+    //                 parse_str($this->env['slim.input'], $output);
+    //             }
+    //             $this->env['slim.request.form_hash'] = Util::stripSlashesIfMagicQuotes($output);
+    //         } else {
+    //             $this->env['slim.request.form_hash'] = Util::stripSlashesIfMagicQuotes($_POST);
+    //         }
+    //     }
+    //     if ($key) {
+    //         if (isset($this->env['slim.request.form_hash'][$key])) {
+    //             return $this->env['slim.request.form_hash'][$key];
+    //         } else {
+    //             return null;
+    //         }
+    //     } else {
+    //         return $this->env['slim.request.form_hash'];
+    //     }
+    // }
 
     /**
      * Fetch PUT data (alias for \Slim\Http\Request::post)
