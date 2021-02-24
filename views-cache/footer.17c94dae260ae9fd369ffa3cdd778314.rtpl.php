@@ -59,7 +59,7 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="copyright">
-                    <p>&copy; 2021 Arthur Pereira Guimarães. <a href="http://www.hcode.com.br" target="_blank">Arthur Pereira Guimarães</a></p>
+                    <p>&copy; 2021 Arthur Pereira Guimarães. <a href="https://github.com/arthurgui" target="_blank">Arthur Pereira Guimarães</a></p>
                 </div>
             </div>
             
