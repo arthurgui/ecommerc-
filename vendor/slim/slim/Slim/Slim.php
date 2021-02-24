@@ -165,7 +165,7 @@ class Slim
         $this->router = new \Slim\Router($this->request->getResourceUri());
         $this->middleware = array($this);
         $this->add(new \Slim\Middleware\Flash());
-        $this->add(new \Slim\Middleware\MethodOverride());
+        // $this->add(new \Slim\Middleware\MethodOverride());
 
         // Determine application mode
         $this->getMode();
