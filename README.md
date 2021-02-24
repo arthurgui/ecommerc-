@@ -1,5 +1,14 @@
 # Projeto E-commerce
 
-Projeto desenvolvido do zero no [Curso de PHP 7](https://www.udemy.com/curso-completo-de-php-7/) disponível na plataforma da Udemy e no site do [HTML5dev.com.br](https://www.html5dev.com.br/curso/curso-completo-de-php-7).
+Projeto desenvolvido do zero no com php 7.
 
-Template usado no projeto [Almsaeed Studio](https://almsaeedstudio.com)
+Basea em loja virtual ( e-commerc)
+
+# Baixar o projeto ( git fetch ou git clone)
+
+# Configurar o index.html e o banco de dados e a rota do sevidor
+
+# Composer dump-autoload
+
+# entrar na url da loja 
+
